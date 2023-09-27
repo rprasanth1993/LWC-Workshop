@@ -1,0 +1,28 @@
+<template>
+    <lightning-card title="DAY 15 DO IT INPUT BINDING" icon-name="standard:textbox">
+        <div class="slds-m-around_medium">
+
+            Coding Language details :{programmingLanguages}
+            
+            <br>
+            <!-- added msg display,if exists -->
+            <template if:true={isSuccess}>
+            {a}
+            </template>
+
+            <lightning-input 
+                type="text" 
+                label="Enter the text"
+                name = "valueAvailabe"                
+                onchange={handleChange}>
+            </lightning-input>
+       
+            <lightning-button
+                variant="brand" 
+                label="Add"             
+                onclick={handleClick}>
+            </lightning-button>
+
+        </div>
+    </lightning-card>
+</template>

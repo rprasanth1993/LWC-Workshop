@@ -1,0 +1,45 @@
+<template>
+    <lightning-card title="DAY 14 DO IT CALC" icon-name="standard:global_constant">
+        <div class="slds-m-around_medium">
+            Arithmetic Operation Details: {result} 
+            <lightning-input
+                type="text"
+                label="Enter the first number"
+                name="number1"
+                onchange={handleChange}>
+            </lightning-input>
+
+            <lightning-input
+                type="text"
+                label="Enter the second number"
+                name="number2"
+                onchange={handleChange}>
+            </lightning-input>
+            <br>
+
+            <lightning-button
+            variant="brand" 
+            label="ADD" 
+            onclick={addhandleClick}>
+        </lightning-button>
+        &nbsp;
+        <lightning-button
+            variant="brand" 
+            label="SUB" 
+            onclick={subhandleClick}>
+        </lightning-button>
+        &nbsp;
+        <lightning-button
+            variant="brand" 
+            label="MULT" 
+            onclick={multihandleClick}>
+        </lightning-button>
+        &nbsp;
+        <lightning-button
+            variant="brand" 
+            label="DIV" 
+            onclick={divhandleClick}>
+        </lightning-button>
+        </div>
+    </lightning-card>
+</template>

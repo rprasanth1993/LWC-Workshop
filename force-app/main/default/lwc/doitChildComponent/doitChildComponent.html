@@ -1,0 +1,26 @@
+<template>
+<lightning-card title="day16 DOIT Child Work" icon-name="utility:user">
+    <div class="slds-var-m-around_medium">
+        <p> Child component</p>  
+        <template
+        for:each={employeeList}
+        for:item="parentemp1">  
+      
+        <div key={parentemp1.code}>
+                Name: {parentemp1.name}
+                Position : {parentemp1.position}
+                Salary: {parentemp1.salary}
+                Working : {parentemp1.isworking} 
+                <br>
+                
+            <a href="javascript:void(0);"  name={parentemp1.name} key={parentemp1.code}
+            onclick={changeHandler}>{parentemp1.name}<br/> </a>            
+        </div>
+        </template>
+        
+        <!-- employee showing parent informaton  in child :{employeefromparent}    -->
+<br>
+        
+    </div>
+</lightning-card>
+</template>

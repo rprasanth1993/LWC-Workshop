@@ -1,0 +1,35 @@
+<template>
+    <lightning-card title="DAY 18 DoIt Search" icon-name="standard:work_contract">
+        <div class="slds-m-around_medium">
+
+
+            <lightning-input 
+            type="text" 
+            label="Enter the Lastname"
+            value={lastname} 
+            onchange={searchHandleChange}>
+            </lightning-input>
+            &nbsp;
+            <lightning-button
+            variant="brand"
+            label="Search"
+            onclick={searchHandleClick}>
+            </lightning-button>
+
+            <template if:true={contacts}>                
+                <template 
+                for:each={contacts}
+                for:item="con">
+                
+                <div key={con.Id}>
+                    {con.LastName}
+                </div>
+                </template>                
+            </template>
+
+            <template if:true={error}>
+                Error in data loading
+            </template>
+        </div>
+    </lightning-card>
+</template>

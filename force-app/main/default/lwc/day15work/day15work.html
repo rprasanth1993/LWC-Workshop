@@ -1,0 +1,70 @@
+<template>
+    <lightning-card title="DAY15WORK" icon-name="utility:skip">
+        <div class="slds-m-around_medium">
+            <!-- normal way of binding -->
+            course details:{courses} 
+           
+            <!-- template looping ....
+            we can't use th template inside the template.unless there is template looping and conditional rendering-->
+           <br>
+            <template
+                for:each={courses}
+                for:item = "currentitem">  
+                           <!-- it showing in single line -->
+               template binding:{currentitem}
+              
+              <!-- one by one printing -->
+                  <!-- <div 
+                    key={currentitem} style="background-color:brown;color:antiquewhite">
+                    detail of courses : {currentitem}
+
+                </div>    -->
+                    <!-- this is for the particular div identify value -->
+                    <!-- after the data we can give any name here i gave as value  -->
+            
+                <!-- <div 
+                
+                    key={currentitem}  data-value ={currentitem} style="background-color:brown;color:antiquewhite" onclick={handleDivClick}>
+                    detail of courses : {currentitem}
+
+                </div>   -->
+
+             
+             </template>    
+             <br>        
+             employee details : {employee} 
+             <!-- here employee we used as jason format so in html it comes like this only,in js we can change
+             format by using jaso.stringfy it used only in js -->
+            <template
+                for:each = {employee}
+                for:item = "emp">
+                <template if:true = {emp.isworking}>
+                    <!-- here our scenario is if it is working we take the true ele we taking false condition -->
+                    <!-- as we disccused above for one by one displaying we should use div -->
+                    <div key={emp.Name}>
+                        <!-- here we based on employee name we take the value of the row -->
+                        Name: {emp.Name}
+                        Position : {emp.Position}
+                        Salary: {emp.salary}
+                        Working : {emp.isworking}
+                </div>
+                </template>
+                <template if:false = {emp.isworking}>
+                    <div key={emp.Name}>
+                        Name: {emp.Name}
+                        Position : {emp.Position}
+                        Salary: {emp.salary}
+                        Working : {emp.isworking}
+                </div>
+                </template>
+                   
+             </template> 
+             <br>
+            <lightning-button
+                variant="brand" 
+                label="submit" 
+                onclick={handleClick}>
+            </lightning-button>
+        </div>
+    </lightning-card>
+</template>

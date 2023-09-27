@@ -1,0 +1,12 @@
+<apex:page >
+  <!-- Begin Default Content REMOVE THIS -->
+  <h1>Congratulations</h1>
+  This is your new vf2Page
+  <!-- End Default Content REMOVE THIS -->
+  <br/><br/><br/>
+  <b>what is visualforcepage? </b><br/>
+  Visualforce is a markup language that allows defining user interface components in Salesforce. <br/>
+  This is a very interesting tool which runs o force.com platform. By using page layouts, we can easily configure the User interface.<br/>
+  But by using visualforce pages, you can develop your own customized user interface.
+
+</apex:page>

@@ -1,0 +1,38 @@
+.demo{
+    background-color:grey ;
+    color:burlywood;
+    padding: 20px;
+    /* padding take all four sides likewise to margin */
+    border: 5px dotted black;
+    border-radius: 20px;
+    margin: 30px; 
+    text-align: justify;
+    margin: auto;
+    /* margin --edge of the screen
+    border -- coming under margin
+    padding--coming uder border
+     margin :auto used to fixed that in center or correct fit to the screen
+    In previously in at right side end it's not allign properly,so get alling use justify 
+    eg:text-align:justify */
+}
+
+.demo1{
+    background-color: red;
+    color:white;
+    border: 5px solid burlywood;
+    border-radius: 10px;
+    width: 80%;
+    text-align: center;
+    font-size: 10px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: italic;
+
+}
+
+ .demo2{
+    background-color:greenyellow;
+    color:brown;
+    
+    
+  
+}

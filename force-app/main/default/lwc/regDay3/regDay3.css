@@ -1,0 +1,23 @@
+/* for the entire component for style we can use :host */
+:host{
+    background-color: blue;
+    color: white;
+    border: 5px rgb(9, 178, 11) solid;
+    display: block;
+}
+/* .div1style{
+    background-color: brown;
+    color: white;
+    padding: 30px;
+    border: 5px rebeccapurple solid;
+    margin: 20px;
+}
+
+.div2style{
+    background-color: green;
+    color: yellow;
+}
+.parastyle{
+    background-color: blue;
+    color: black;
+}  */

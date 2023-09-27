@@ -1,0 +1,25 @@
+<template>
+    <lightning-card title="DO IT DAY 14 ATM" icon-name="standard:crypto_product">
+        <div class="slds-m-around_medium">
+            Opening Balance details:{openingBalance}
+
+            <lightning-input
+                type="text"
+                label="Enter the amount"
+                onchange={handleChange}>
+            </lightning-input>
+            <br>
+            <lightning-button
+                variant="brand" 
+                label="Withdraw"
+                onclick={withdrawhandleClick}>
+            </lightning-button>
+            &nbsp;
+            <lightning-button
+                variant="brand" 
+                label="Deposit" 
+                onclick={deposithandleClick}>
+            </lightning-button>
+        </div>
+    </lightning-card>
+</template>

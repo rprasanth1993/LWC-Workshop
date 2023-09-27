@@ -1,0 +1,71 @@
+<template>
+ <lightning-card title="Data Binding" icon-name="standard:account">
+    <div class="slds-m-around_medium">
+<!-- js to html -->
+        welcome : {message}
+        <br>
+        Student Name : {student.Name}
+        <br>
+        Student Department: {student.Department}
+        <br>
+       Course Details : {courses}
+        <br>
+       Course Getter Details : {courseName}
+        <br>
+       firstname details :{firstname}
+      <br>
+      lastname details :{lastname}
+      <br>
+      <!-- directly we can't get the courses first value eg:mech
+    so that we used to go getter method -->
+
+    <!-- html to js -->
+    <!-- <lightning-input 
+        type = "text"
+        variant="standard" 
+        name="textmessage" 
+        label="Enter the message"
+        onchange={handleChange}>
+    </lightning-input>
+
+    <lightning-input 
+        type = "text"
+        variant="standard" 
+        name="txtFirstName" 
+        label="Enter the first name"
+        onchange={handleFirstChange}>
+    </lightning-input>
+    <lightning-input 
+        type = "text"
+        variant="standard" 
+        name="txtLasttName" 
+        label="Enter the lastname"
+        onchange={handleSecondChange}> -->
+<!-- now trying all event in single methos -->
+        <lightning-input 
+        type = "text"
+        variant="standard" 
+        name="textmessage" 
+        label="Enter the message"
+        onchange={handleChange1}>
+    </lightning-input>
+
+    <lightning-input 
+        type = "text"
+        variant="standard" 
+        name="txtFirstName" 
+        label="Enter the first name"
+        onchange={handleChange1}>
+    </lightning-input>
+    <lightning-input 
+        type = "text"
+        variant="standard" 
+        name="txtLastName" 
+        label="Enter the lastname"
+        onchange={handleChange1}> 
+    </lightning-input>
+        <lightning-button variant="brand" label="submit" onclick={handleclick}>           
+        </lightning-button>
+    </div>
+ </lightning-card>
+</template>

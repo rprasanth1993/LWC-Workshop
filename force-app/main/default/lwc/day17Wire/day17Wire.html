@@ -1,0 +1,52 @@
+<template>
+    <lightning-card title="DAY 17 WIRE" icon-name="standard:work_contract">
+        <div class="slds-m-around_medium">
+            <!-- wired property -->
+            <!-- data is std we have to use the data as keyword -->
+                <!-- <template if:true={accounts.data}>
+
+                    <template
+                        for:each={accounts.data}
+                        for:item="acc">
+
+                        <div key={acc.Id}>
+                           account name: {acc.Name}
+                           account phone: {acc.Phone}
+                       </div>
+                    </template>
+
+                </template>
+                
+                <template if:false={accounts.data}>
+                        There is no data
+                </template> -->
+
+                <!-- wired function -->
+                <template if:true={accounts}>
+
+                    <template
+                        for:each={accounts}
+                        for:item="acc">
+
+                        <div key={acc.Id}>
+                           account name: {acc.Name}
+                           account phone: {acc.Phone}
+                       </div>
+                    </template>
+
+                </template>
+
+                <template if:true={error}>
+                    There is no data
+                </template> 
+
+
+                <lightning-button 
+                variant="brand"
+                label="Get Account"
+                onclick={handleClick}>
+
+                </lightning-button>
+        </div>
+    </lightning-card>
+</template>

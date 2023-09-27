@@ -1,0 +1,16 @@
+<template>
+    <!-- while accessing the child component if it's camel case u have to use the '-' 
+        before the capital letter. eg: createTaskEnd=>create-task-End -->
+        <lightning-layout multiple-rows>
+            <lightning-layout-item size="12" padding ="around-small">
+                <!-- below line we are caaling the child component -->
+            <c-create-task onrefreshtodo={refreshToDo}></c-create-task></lightning-layout-item>
+        
+        <lightning-layout-item size="6" padding ="around-small">
+            <!-- below line we are caling the child component for pending -->
+        <c-to-do-list lwc:ref="pendingToDo" task-status="Pending" onrefreshtodo={refreshToDo}></c-to-do-list></lightning-layout-item>
+        <lightning-layout-item size="6" padding ="around-small">
+            <!-- below line we are caling the child component for completed -->
+        <c-to-do-list lwc:ref="completedToDo"  task-status="Completed" onrefreshtodo={refreshToDo}></c-to-do-list></lightning-layout-item>
+    </lightning-layout>
+</template>

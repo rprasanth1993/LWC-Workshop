@@ -1,0 +1,17 @@
+<template>
+<lightning-card title="conditional rendering element" icon-name="utility:agent_session">
+    <div class="slds-var-m-around_medium">
+  hi,{listofvalues}!
+    </div>
+<div style="padding:10px">
+    <lightning-input type ="checkbox" label="click me" onchange={handlechange}></lightning-input>
+    <template if:true={showme}>
+        <p> i am visible</p>
+    </template>
+
+    <template if:false={showme}>
+        <p>i am not visible</p>
+    </template>
+</div>
+</lightning-card>
+</template>

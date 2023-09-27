@@ -1,0 +1,20 @@
+<template>
+    <lightning-card title="day16 DOIT Parent Work" icon-name="utility:user">
+        <div class="slds-var-m-around_medium">
+            <p> Parent component</p>
+            <b>Textfromthechild</b>
+            <template if:true={isShow}>
+            <div>
+                <strong>Employee Name : {selectedEmployee.name}</strong><br/>
+                <strong>Position : {selectedEmployee.position}</strong><br/>
+                <strong>Salary : {selectedEmployee.salary}</strong><br/>
+                <strong>IsWorking: {selectedEmployee.isworking}</strong>
+            </div>
+        </template>
+        <c-doit-child-component 
+        employee-list={employeeList} 
+        onchildclick={handleclickfromchild}> 
+        </c-doit-child-component>
+       </div>
+    </lightning-card>
+</template>

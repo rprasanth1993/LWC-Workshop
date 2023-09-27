@@ -1,0 +1,28 @@
+<template>
+    <lightning-card title="DAY 16 DECORATORS" icon-name="standard:forecasts">
+        <div class="slds-m-around_medium">
+            
+            <template
+                for:each={employee}
+                for:item="emp">
+                <!-- here we are making only is working equal to true -->
+                <template if:true={emp.isworking}>
+                    <div 
+                        key={emp.Name}>
+                        Name: {emp.Name}
+                        Position : {emp.Position}
+                        Salary: {emp.salary}
+                        Working : {emp.isworking}                  
+                    </div>
+                </template>
+            </template>
+
+            <lightning-button
+                variant="brand" 
+                label="submit" 
+                onclick={handleClick}>
+            </lightning-button>
+        </div>
+
+    </lightning-card>
+</template>

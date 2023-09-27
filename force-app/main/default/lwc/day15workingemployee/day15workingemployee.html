@@ -1,0 +1,38 @@
+<template>
+    <lightning-card title="DAY 15 DO IT WORKING AND NOT WORKING" icon-name="standard:textbox">
+        <div class="slds-m-around_medium">
+
+            <b>Working employees</b>    
+            <template          
+                for:each={employee}
+                for:item="emp">
+                <template if:true={emp.isworking}>                  
+                    <li key={emp.Id}>
+                        Id:{emp.EmployeeId}
+                        Name: {emp.Name}
+                        Position : {emp.Position}
+                        Salary: {emp.salary}
+                        Working : {emp.isworking}
+                    </li>               
+                </template>
+            </template>
+
+            <b>Not Working employees</b> 
+          <template          
+                for:each={employee}
+                for:item="emp">
+                 <template if:false={emp.isworking}>
+                    <li key={emp.Id}>
+                        Id:{emp.EmployeeId}
+                        Name: {emp.Name}
+                        Position : {emp.Position}
+                        Salary: {emp.salary}
+                        Working : {emp.isworking}
+                    </li>
+                </template> 
+            </template>
+           
+        </div>
+    </lightning-card>
+    
+</template>

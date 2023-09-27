@@ -1,0 +1,36 @@
+<template>
+    <lightning-card title="day16 DOIT Parent Work" icon-name="utility:user">
+        <div class ="slds-m-around_medium">
+            <p> Parent component</p>
+
+           <b>Textfromchild</b>
+           <br>
+           <b>
+            <!-- as a i said here messafromchild where are storing the record in array
+            so when click the record seprate record will come
+        Moreover at initial time the record name it has no record,so if the record have it display so that using name -->
+           <template if:true={messagefromchild}>
+            selectedemployyeinformation :{messagefromchild.Name}
+            Name: {messagefromchild.Name}
+            Position : {messagefromchild.Position}
+            Salary: {messagefromchild.salary}
+            Working : {messagefromchild.isworking}      
+        </template>   
+    </b>
+            <template
+                for:each={employee}
+                for:item="parentemp">  
+                       <!-- here in childcomponent by click the button we need respected so that we are 
+                    using the key in child component calling  -->
+                <c-day16-Doit-Child
+                
+                employeefromparent={parentemp}
+                onchildclick={handleclickfromchild}
+                key ={parentemp.Name}> 
+            </c-day16-Doit-Child>
+        </template> 
+
+             
+        </div>
+    </lightning-card>
+</template>

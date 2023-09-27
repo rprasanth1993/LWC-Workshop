@@ -1,0 +1,20 @@
+<template>
+    <lightning-card title="day 16 Parent Work" icon-name="utility:transport_walking">
+            <div class ="slds-m-around_medium">
+                <p> Parent component</p>
+                <!-- emmbedding the child component -->
+                <!-- very important -->
+                <!-- if it Capital like day16ParentWork(camelcase)
+                 we have to use <c-day16-parent-work -->
+<!-- while deployig,we should deploy the child first because in parent u used child so deploy first and then deploy parent -->
+               
+<!-- onbuttonclick we ake event name from child and added the keyword "on" before (eg:onbuttonClick) -->
+            <c-day16childwork
+                messagefromparent ={messagefromchild} 
+                onbuttonclick={handleclickfromchild}>
+            </c-day16childwork>
+            message from child = {messagefromchild}               
+              
+            </div>
+    </lightning-card>
+</template>

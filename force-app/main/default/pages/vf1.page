@@ -1,0 +1,9 @@
+<apex:page Controller="Customcon1" >
+  <!-- Begin Default Content REMOVE THIS -->
+  <h1>Congratulations</h1>
+  This is your new vf Page
+  <!-- End Default Content REMOVE THIS -->
+  <apex:form >
+  <apex:commandButton value="REDIRECT" action="{}"/>
+  </apex:form>
+</apex:page>

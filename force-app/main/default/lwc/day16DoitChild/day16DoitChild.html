@@ -1,0 +1,28 @@
+<template>
+    <lightning-card title="day16 DOIT Child Work" icon-name="utility:user">
+        <div class ="slds-m-around_medium">
+            <p> Child component</p>  
+                   
+            <div>
+                <!-- binding the employee information value -->
+                <!-- here didn't use the template  for each item,becasue here in parent it's coming from array
+                and we are taking the singe record that is object,in parent it show the all child record one by one -->
+            employeechild information: {employeefromparent.Name}
+                    Name: {employeefromparent.Name}
+                    Position : {employeefromparent.Position}
+                    Salary: {employeefromparent.salary}
+                    Working : {employeefromparent.isworking} 
+                  &nbsp; &nbsp;
+                    <lightning-button
+                            variant="brand" 
+                            label="Select" 
+                            onclick={childhandleClick}>
+                </lightning-button>                 
+            </div>
+            
+            <!-- employee showing parent informaton  in child :{employeefromparent}    -->
+<br>
+           
+        </div>
+    </lightning-card>
+</template>

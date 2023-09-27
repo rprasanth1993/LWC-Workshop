@@ -1,0 +1,35 @@
+<template>
+    <lightning-card title="Bind Expressions from JS" icon-name="utility:user">
+        <div class="slds-var-m-around_medium">
+           
+            <lightning-input name="fullName" label="Full Name" onchange={handleChange} value={namevalue}>
+            </lightning-input>
+           
+            <lightning-input type="tel" name="phone" label="Enter Mobile No." onchange={handleChange} value={namevalue1}>
+            </lightning-input>
+            
+            <lightning-input type="email" name="email" label="Email" onchange={handleChange} value={namevalue2}>
+            </lightning-input>
+        </div>
+        <div style="padding:10px">
+            <table border="1">
+                <tr>
+                    <td>Full Name : </td>
+                    <td>{upperCase}</td>
+                </tr>
+                <tr>
+                    <td>Email : </td>
+                    <!-- name value what giving in name is input field -->
+                    <td>{email}</td>  
+
+                </tr>
+                <tr>
+                    <td>Phone : </td>
+                    <!-- name value what giving in name is input field -->
+                    <td>{phone}</td>
+                </tr>
+            </table>
+
+        </div>
+    </lightning-card>
+</template>

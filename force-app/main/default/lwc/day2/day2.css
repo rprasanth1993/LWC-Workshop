@@ -1,0 +1,10 @@
+:host {
+    
+    --slds-c-card-color-background: green;
+    --slds-c-card-text-color:white;
+}
+
+div{
+    background-color: cyan;
+    color:brown;
+}
